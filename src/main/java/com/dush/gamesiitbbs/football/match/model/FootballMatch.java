@@ -14,13 +14,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class FootballMatch {
     private String id;
-    private String name;
     private int number;
     private String tournamentId;
     private String tournamentName;
     private LocalDate date;
     private String team1Name;
     private String team2Name;
-    private String team1Goals;
-    private String team2Goals;
+    private int team1Goals;
+    private int team2Goals;
 }

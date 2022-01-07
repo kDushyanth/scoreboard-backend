@@ -4,6 +4,8 @@ import com.dush.gamesiitbbs.football.tournament_details.model.FootballTournament
 import com.dush.gamesiitbbs.football.tournament_details.repository.FootballTournamentDetailsRepository;
 
 import java.util.Optional;
+import java.util.UUID;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,4 +17,14 @@ public class FootballTournamentDetailsService {
     public Optional<FootballTournamentDetails>findFootballTournamentDetailsById(String id){
         return footballTournamentDetailsRepository.findById(id);
     } 
+    public FootballTournamentDetails saveFootballTournamentDetails(FootballTournamentDetails footballTournamentDetails){
+        FootballTournamentDetails _footballTournamentDetails = new FootballTournamentDetails(
+            UUID.randomUUID().toString(),
+            footballTournamentDetails.getName(),
+            footballTournamentDetails.getStartDate(),
+            footballTournamentDetails.getEndDate(),
+            footballTournamentDetails.getMatches()
+        );
+        return footballTournamentDetailsRepository.save(_footballTournamentDetails);
+    }
 }
