@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Document("football_match_details")
-public class FootballMatch {
+public class FootballMatchDetails {
     @Id
     private String id;
     private int number;

@@ -3,19 +3,19 @@ package com.dush.gamesiitbbs.football.match_details.service;
 import java.util.Optional;
 import java.util.UUID;
 
-import com.dush.gamesiitbbs.football.match_details.model.FootballMatch;
-import com.dush.gamesiitbbs.football.match_details.repository.FootballMatchRepository;
+import com.dush.gamesiitbbs.football.match_details.model.FootballMatchDetails;
+import com.dush.gamesiitbbs.football.match_details.repository.FootballMatchDetailsRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class FootballMatchService {
+public class FootballMatchDetailsService {
     
     @Autowired
-    private FootballMatchRepository footballMatchRepository;
-    public FootballMatch saveFootballMatch(FootballMatch footballMatch){
-        return footballMatchRepository.save(new FootballMatch(
+    private FootballMatchDetailsRepository footballMatchRepository;
+    public FootballMatchDetails saveFootballMatch(FootballMatchDetails footballMatch){
+        return footballMatchRepository.save(new FootballMatchDetails(
             UUID.randomUUID().toString(),
             footballMatch.getNumber(),
             footballMatch.getTournamentId(),
@@ -24,7 +24,7 @@ public class FootballMatchService {
             footballMatch.getFootballTeamScores()
         ));
     }
-    public Optional<FootballMatch> findFootballMatchById(String id){
+    public Optional<FootballMatchDetails> findFootballMatchById(String id){
         return footballMatchRepository.findById(id);
     }
 }
