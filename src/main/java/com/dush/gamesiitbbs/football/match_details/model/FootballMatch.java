@@ -1,4 +1,4 @@
-package com.dush.gamesiitbbs.football.model;
+package com.dush.gamesiitbbs.football.match_details.model;
 
 import java.time.LocalDate;
 import java.util.List;

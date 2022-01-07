@@ -1,6 +1,6 @@
-package com.dush.gamesiitbbs.football.repository;
+package com.dush.gamesiitbbs.football.match.repository;
 
-import com.dush.gamesiitbbs.football.model.FootballMatch;
+import com.dush.gamesiitbbs.football.match.model.FootballMatch;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
