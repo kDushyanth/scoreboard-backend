@@ -3,10 +3,7 @@ package com.dush.gamesiitbbs.football.tournament.controller;
 import java.util.List;
 import java.util.Optional;
 
-import javax.annotation.PostConstruct;
-
 import com.dush.gamesiitbbs.football.tournament.model.FootballTournament;
-import com.dush.gamesiitbbs.football.tournament.repository.FootballTournamentRepository;
 import com.dush.gamesiitbbs.football.tournament.service.FootballTournamentService;
 
 import org.springframework.beans.factory.annotation.Autowired;
